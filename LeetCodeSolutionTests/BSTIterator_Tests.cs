@@ -28,13 +28,13 @@ namespace LeetCodeSolutionTests
              *    2   5  7  11
              */
 
-            root.Left = node1;
-            node1.Left = node3;
-            node1.Right = node2;
+            root.left = node1;
+            node1.left = node3;
+            node1.right = node2;
 
-            root.Right = node5;
-            node5.Left = node4;
-            node5.Right = node6;
+            root.right = node5;
+            node5.left = node4;
+            node5.right = node6;
 
 
             BsTree = root;

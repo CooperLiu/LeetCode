@@ -52,19 +52,19 @@ namespace LeetCodeSolution
             while (root != null)
             {
                 _stack.Push(root);
-                root = root.Left;
+                root = root.left;
             }
         }
 
         public int next()
         {
             var topSmallNode = _stack.Pop();
-            if (topSmallNode.Right!=null)
+            if (topSmallNode.right!=null)
             {
-                InOrderLeftTreeNodes(topSmallNode.Right);
+                InOrderLeftTreeNodes(topSmallNode.right);
             }
 
-            return topSmallNode.Val;
+            return topSmallNode.val;
         }
 
 
@@ -78,15 +78,15 @@ namespace LeetCodeSolution
 
     public class TreeNode
     {
-        public int Val;
+        public int val;
 
-        public TreeNode Left;
+        public TreeNode left;
 
-        public TreeNode Right;
+        public TreeNode right;
 
         public TreeNode(int x)
         {
-            Val = x;
+            val = x;
         }
 
     }
