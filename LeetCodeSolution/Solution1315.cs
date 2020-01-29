@@ -30,13 +30,13 @@
      */
     public class Solution1315
     {
-        private int sum = 0;
+        private int _sum = 0;
 
         public int SumEvenGrandparent(TreeNode root)
         { 
             dfs(root, null);
 
-            return sum;
+            return _sum;
         }
 
         private void dfs(TreeNode node, TreeNode parent)
@@ -50,12 +50,12 @@
             {
                 if (node.left!=null)
                 {
-                    sum += node.left.val;
+                    _sum += node.left.val;
                 }
 
                 if (node.right!=null)
                 {
-                    sum += node.right.val;
+                    _sum += node.right.val;
                 }
             }
 

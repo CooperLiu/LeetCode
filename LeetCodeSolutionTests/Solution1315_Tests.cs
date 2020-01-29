@@ -1,16 +1,15 @@
-using System;
-using LeetCodeSolution;
+Ôªøusing LeetCodeSolution;
 using Xunit;
 
 namespace LeetCodeSolutionTests
 {
-    public class BSTIterator_Tests
+    public class Solution1315_Tests
     {
         private readonly TreeNode BsTree;
 
-        public BSTIterator_Tests()
+        public Solution1315_Tests()
         {
-            //ππ‘Ï∂˛≤Ê ˜
+            //ÊûÑÈÄ†‰∫åÂèâÊ†ë
             var root = new TreeNode(6);
             var node1 = new TreeNode(4);
             var node2 = new TreeNode(5);
@@ -38,32 +37,16 @@ namespace LeetCodeSolutionTests
 
 
             BsTree = root;
-
         }
 
         [Fact]
-        public void BSTIterator_Test()
+        public void SumEvenGrandparent_Test()
         {
-            var iterator = new BSTIterator(BsTree);
+            var solution= new Solution1315();
 
-            if (iterator.hasNext())
-            {
-               var a= iterator.next();
+            var result = solution.SumEvenGrandparent(BsTree);
 
-               Assert.Equal(2,a);
-
-               var b = iterator.next();
-
-               Assert.Equal(4,b);
-
-               var c = iterator.next();
-
-               Assert.Equal(5,c);
-
-               var hasNext = iterator.hasNext();
-
-               Assert.True(hasNext);
-            }
+            Assert.Equal(25,result);
         }
     }
 }
