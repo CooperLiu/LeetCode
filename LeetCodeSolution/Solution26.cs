@@ -105,7 +105,7 @@ for (int i = 0; i < len; i++) {
 
             while (fast < nums.Length)
             {
-                if (nums[slow]!=nums[fast])
+                if (nums[slow] != nums[fast])
                 {
                     nums[slow + 1] = nums[fast];
                     slow++;

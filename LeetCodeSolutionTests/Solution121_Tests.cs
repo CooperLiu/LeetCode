@@ -1,4 +1,5 @@
-﻿using LeetCodeSolution;
+﻿using System.Linq;
+using LeetCodeSolution;
 using Xunit;
 
 namespace LeetCodeSolutionTests
