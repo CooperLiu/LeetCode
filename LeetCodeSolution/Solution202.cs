@@ -41,7 +41,7 @@
                 slow = Sum(slow);
                 fast = Sum(fast);
                 fast = Sum(fast);
-            } while (fast!=slow);
+            } while (fast != slow);
 
             return slow == 1;
         }
@@ -50,7 +50,7 @@
         {
             int sum = 0;
 
-            while (n>0)
+            while (n > 0)
             {
                 int bit = n % 10;
                 sum += bit * bit;

@@ -10,9 +10,9 @@ namespace LeetCodeSolutionTests
         {
             var solution = new Solution121();
 
-            var res = solution.MaxProfit(new[] {7, 1, 5, 3, 6, 4});
+            var res = solution.MaxProfit(new[] { 7, 1, 5, 3, 6, 4 });
 
-            Assert.Equal(5,res);
+            Assert.Equal(5, res);
         }
     }
 }
