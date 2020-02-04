@@ -70,7 +70,7 @@ namespace LeetCodeSolution
                 dp[i, 2] = Math.Max(dp[i - 1, 2], dp[i - 1, 1] + prices[i]); // 卖出
             }
 
-            return Math.Max(dp[len - 1,0], dp[len - 1,2]);  //前提是先有买入再有卖出，只有不操作或者卖出才能影响正向收益。
+            return Math.Max(dp[len - 1, 0], dp[len - 1, 2]);  //前提是先有买入再有卖出，只有不操作或者卖出才能影响正向收益。
         }
 
     }
