@@ -29,4 +29,18 @@ namespace LeetCodeSolutionTests
             Assert.Equal("bb", res);
         }
     }
+
+
+    public class Solution704_Tests
+    {
+        [Fact]
+        public void Search_Test()
+        {
+            var solution = new Solution704();
+
+            var result = solution.Search(new[] { -1, 0, 3, 5, 9, 12 }, 9);
+
+            Assert.Equal(4,result);
+        }
+    }
 }
