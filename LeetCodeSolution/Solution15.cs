@@ -28,7 +28,7 @@ namespace LeetCodeSolution
         解题思路：排序+快慢指针
 
         算法流程：
-1.特判，对于数组长度 n，如果数组为 null 或者数组长度小于 33，返回 [][]。
+1.特判，对于数组长度 n，如果数组为 null 或者数组长度小于 3，返回 []。
 2.对数组进行排序。
 3. 遍历排序后数组：
 - 若 nums[i]>0：因为已经排序好，所以后面不可能有三个数加和等于 0，直接返回结果。
@@ -58,14 +58,14 @@ namespace LeetCodeSolution
 
             //sort
 
-            nums = nums.OrderBy(a => a).ToArray(); //[-4,-1,-1,0,1,2]
+            nums = nums.OrderBy(a => a).ToArray(); //[-1, 0, 1, 2, -1, -4] -> [-4, -1, -1, 0, 1, 2]
 
             int len = nums.Length;
 
-            for (int i = 0; i < len - 2; i++)
+            for (int i = 0; i < len - 2; i++) 
             {
 
-                if (i == 0 || (i > 0 && nums[i] != nums[i - 1]))//因为数组已经排序，则相邻有可能相等
+                if (i == 0 || (i > 0 && nums[i] != nums[i - 1]))//因为数组已经排序，则相邻有可能相等，
                 {
                     int mid = i + 1;
                     int end = len - 1;
