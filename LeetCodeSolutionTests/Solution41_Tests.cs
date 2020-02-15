@@ -26,13 +26,17 @@ namespace LeetCodeSolutionTests
         {
             var solution = new Solution645();
 
-            var res = solution.FindErrorNums(new[] {1,2,2,4 });
+            var res = solution.FindErrorNums2(new[] {2,2});
 
 
             Assert.Equal(2,res.Length);
 
             Assert.Equal(2,res[0]);
-            Assert.Equal(3,res[1]);
+            Assert.Equal(1,res[1]);
+
+            var res2 = solution.FindErrorNums2(new[] {1, 2, 2, 4});
+
+            Assert.Equal(2,res2[0]);
 
         }
     }

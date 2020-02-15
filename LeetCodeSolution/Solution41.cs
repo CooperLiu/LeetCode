@@ -1,4 +1,6 @@
-﻿namespace LeetCodeSolution
+﻿using System;
+
+namespace LeetCodeSolution
 {
     /*
      * 给定一个未排序的整数数组，找出其中没有出现的最小的正整数。
@@ -99,9 +101,9 @@
 
             int[] res = new int[2];
 
+
             for (int i = 0; i < len; i++)
             {
-
                 nums[i] = nums[i] > 0 ? nums[i] : nums[i] * -1;
 
                 sum += nums[i];
@@ -112,7 +114,7 @@
                 }
                 else
                 {
-                    nums[i] *= -1;
+                    nums[nums[i] - 1] *= -1;
                 }
 
             }
@@ -120,6 +122,27 @@
             res[1] = len * (len + 1) / 2 - sum + res[0];
 
             return res;
+        }
+
+        public int[] FindErrorNums2(int[] nums)
+        {
+            int sum = 0, dup = 0, len = nums.Length;
+            for (int i = 0; i < len; i++)
+            {
+                if (nums[Math.Abs(nums[i]) - 1] > 0)
+                {
+                    nums[Math.Abs(nums[i]) - 1] = -nums[Math.Abs(nums[i]) - 1];
+                }
+                else
+                {
+                    dup = Math.Abs(nums[i]);
+                }
+                sum += Math.Abs(nums[i]);
+            }
+
+            return new[] { dup, (len * (len + 1)) / 2 - sum + dup };
+
+
         }
     }
 }
