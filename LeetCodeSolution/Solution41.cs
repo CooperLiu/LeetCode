@@ -129,15 +129,17 @@ namespace LeetCodeSolution
             int sum = 0, dup = 0, len = nums.Length;
             for (int i = 0; i < len; i++)
             {
-                if (nums[Math.Abs(nums[i]) - 1] > 0)
+                int t = Math.Abs(nums[i]);
+
+                if (nums[t - 1] > 0)
                 {
-                    nums[Math.Abs(nums[i]) - 1] = -nums[Math.Abs(nums[i]) - 1];
+                    nums[t - 1] = -nums[t - 1];
                 }
                 else
                 {
-                    dup = Math.Abs(nums[i]);
+                    dup = t;
                 }
-                sum += Math.Abs(nums[i]);
+                sum += t;
             }
 
             return new[] { dup, (len * (len + 1)) / 2 - sum + dup };
