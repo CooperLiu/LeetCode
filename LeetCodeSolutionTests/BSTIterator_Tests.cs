@@ -65,5 +65,68 @@ namespace LeetCodeSolutionTests
                Assert.True(hasNext);
             }
         }
+
+        [Fact]
+        public void Level_Test()
+        {
+            var path = new TreeGoThrough();
+
+
+            var levelResult = path.Level(BsTree);
+
+            Assert.Equal(11, levelResult[levelResult.Length - 1]);
+
+        }
+
+
+        [Fact]
+        public void Pre_Test()
+        {
+            var path = new TreeGoThrough();
+
+
+            var levelResult = path.Pre(BsTree);
+
+            Assert.Equal(2, levelResult[0]);
+
+        }
+
+
+        [Fact]
+        public void Mid_Test()
+        {
+            var path = new TreeGoThrough();
+
+
+            var levelResult = path.Mid(BsTree);
+
+            Assert.Equal(6, levelResult[0]);
+
+        }
+
+        [Fact]
+        public void End_Test()
+        {
+            var path = new TreeGoThrough();
+
+
+            var levelResult = path.End(BsTree);
+
+            Assert.Equal(11, levelResult[0]);
+
+        }
+
+        [Fact]
+        public void Exchange_Test()
+        {
+            var path = new TreeGoThrough();
+
+            path.Exchange(BsTree);
+
+            var result = path.Pre(BsTree);
+
+
+            Assert.Equal(11, result[0]);
+        }
     }
 }

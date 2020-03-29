@@ -65,4 +65,27 @@ namespace LeetCodeSolutionTests
             Assert.True(res);
         }
     }
+
+    public class Solution70_Tests
+    {
+        [Fact]
+        public void ClimbStairs_Test()
+        {
+            var solution = new Solution70();
+
+            var result = solution.ClimbStairs(3);
+
+            Assert.Equal(3, result);
+        }
+
+        [Fact]
+        public void MinCostClimbingStairs_Test()
+        {
+            var solution = new Solution70();
+
+            var result = solution.MinCostClimbingStairs(new[] { 0, 0, 0, 0 });
+
+            Assert.Equal(0, result);
+        }
+    }
 }
